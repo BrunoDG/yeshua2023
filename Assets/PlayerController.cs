@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
-
     Vector2 movementInput;
     Rigidbody2D rb;
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
@@ -24,22 +23,45 @@ public class PlayerController : MonoBehaviour
     {
         if (movementInput != Vector2.zero)
         {
-            int count = rb.Cast(
-                movementInput,
-                movementFilter,
-                castCollisions,
-                moveSpeed * Time.deltaTime * collisionOffset
-            );
-            if (count == 0)
+            bool success = TryMove(movementInput);
+            if (!success)
             {
-                rb.MovePosition(rb.position + movementInput * moveSpeed * Time.fixedDeltaTime);
+                success = TryMove(new Vector2(movementInput.x, 0));
+
+                if (!success)
+                {
+                    success = TryMove(new Vector2(0, movementInput.y));
+                }
             }
+        }
+    }
+
+    /// <summary>
+    /// Check if the character can or cannot move 
+    /// </summary>
+    /// <param name="moveDirection"></param>
+    /// <returns>If the player can or cannot walk</returns>
+    private bool TryMove(Vector2 direction)
+    {
+        int count = rb.Cast(
+            direction,
+            movementFilter,
+            castCollisions,
+            moveSpeed * Time.fixedDeltaTime * collisionOffset
+        );
+        if (count == 0)
+        {
+            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
     void OnMove(InputValue movementValue)
     {
         movementInput = movementValue.Get<Vector2>();
-
     }
 }
