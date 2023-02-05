@@ -7,10 +7,10 @@ public class DoorCoredorLareira : MonoBehaviour , IInteractable
      public GameObject DoorNew;
     public GameObject character;
     [SerializeField]private string messagemDoorLaraeiraUp;
-    [SerializeField]private UIController uIController;
+    //[SerializeField]private UIController uIController;
      private void Start()
     {
-         uIController.MessageItenToTake.text= messagemDoorLaraeiraUp;
+         //uIController.MessageItenToTake.text= messagemDoorLaraeiraUp;
     }
     public void Interact()
     {
@@ -18,16 +18,16 @@ public class DoorCoredorLareira : MonoBehaviour , IInteractable
     }
      public void NewPositionLareira()
     {
-        if (Key3.enabledKey)
-        {
+        // if (Key3.enabledKey)
+        // {
             
-            Debug.Log("Parabens Vc Abriu  uma porta .");
-            character.transform.position = new Vector3(DoorNew.transform.position.x, DoorNew.transform.position.y, DoorNew.transform.position.z);
-        }
-        else
-        {
-            uIController.MessageItenToTake.gameObject.SetActive(true);
-            //Debug.Log("Voce nao Tem a Chave.");
-        }
+        //     Debug.Log("Parabens Vc Abriu  uma porta .");
+        //     character.transform.position = new Vector3(DoorNew.transform.position.x, DoorNew.transform.position.y, DoorNew.transform.position.z);
+        // }
+        // else
+        // {
+        //     //uIController.MessageItenToTake.gameObject.SetActive(true);
+        //     //Debug.Log("Voce nao Tem a Chave.");
+        // }
     }
 }
