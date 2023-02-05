@@ -39,8 +39,8 @@ public class PlayerController : MonoBehaviour
     /// <summary>
     /// Check if the character can or cannot move 
     /// </summary>
-    /// <param name="moveDirection"></param>
-    /// <returns>If the player can or cannot walk</returns>
+    /// <param name="moveDirection">direction given for the character on a (x,y) vector</param>
+    /// <returns>If the player can or cannot walk for the given direction</returns>
     private bool TryMove(Vector2 direction)
     {
         int count = rb.Cast(
@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            print("Hey. I've crashed.");
             return false;
         }
     }
