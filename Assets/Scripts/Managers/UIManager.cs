@@ -15,20 +15,24 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
+        OpenMainMenu();
+    }
+
+    public void OpenMainMenu()
+    {
         MainMenuCanvas.SetActive(true);
         // deactivating the GrayScale Filter
         FilteredCanvas.SetActive(false);
 
-        //QuizCanvas.SetActive(false);
-        //LoseCanvas.SetActive(false);
-        //WinCanvas.SetActive(false);
-
+        QuizCanvas.SetActive(false);
+        LoseCanvas.SetActive(false);
+        WinCanvas.SetActive(false);
     }
-
 
     public void StartGame()
     {
         MainMenuCanvas.SetActive(false);
+        // Gray Scaling the game
         FilteredCanvas.SetActive(true);
     }
 
