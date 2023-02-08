@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UI;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 [CreateAssetMenu(fileName = "QuizItemScriptableObject", menuName = "ScriptableObjects/QuizItem")]
 public class so_QuizItem : ScriptableObject

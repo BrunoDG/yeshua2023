@@ -526,7 +526,6 @@ GameObject:
   - component: {fileID: 197544843}
   - component: {fileID: 197544844}
   - component: {fileID: 197544845}
-  - component: {fileID: 197544846}
   - component: {fileID: 197544847}
   m_Layer: 0
   m_Name: character
@@ -647,41 +646,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &197544846
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197544841}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.32, y: 0.64}
-  m_Direction: 0
 --- !u!61 &197544847
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3510,8 +3474,9 @@ GameObject:
   - component: {fileID: 432662702}
   - component: {fileID: 432662703}
   - component: {fileID: 432662704}
+  - component: {fileID: 432662705}
   m_Layer: 3
-  m_Name: Isometric Diamond (2)
+  m_Name: Isometric Diamond C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3619,6 +3584,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &432662705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432662701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 458a946581aee074796daa408229177c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &443932922
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,8 +4378,9 @@ GameObject:
   - component: {fileID: 667550306}
   - component: {fileID: 667550307}
   - component: {fileID: 667550308}
+  - component: {fileID: 667550309}
   m_Layer: 3
-  m_Name: Isometric Diamond
+  m_Name: Isometric Diamond A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4465,7 +4443,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 2fc30cfbefb3ef846bc585c4b405e76b, type: 3}
-  m_Color: {r: 0.11035956, g: 0.754717, b: 0.6884536, a: 1}
+  m_Color: {r: 0.016642937, g: 0.20754719, b: 0.18792152, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4510,6 +4488,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &667550309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667550305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6432fabc2771944478c89055f8a49153, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &687901515
 GameObject:
   m_ObjectHideFlags: 0
@@ -122680,8 +122670,9 @@ GameObject:
   - component: {fileID: 2112385538}
   - component: {fileID: 2112385539}
   - component: {fileID: 2112385540}
+  - component: {fileID: 2112385541}
   m_Layer: 3
-  m_Name: Isometric Diamond (1)
+  m_Name: Isometric Diamond B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -122744,7 +122735,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 2fc30cfbefb3ef846bc585c4b405e76b, type: 3}
-  m_Color: {r: 0.7529412, g: 0.52634597, b: 0.10980391, a: 1}
+  m_Color: {r: 0.38679248, g: 0.26225972, b: 0.034665354, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122789,3 +122780,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &2112385541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112385537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0723c4c0976a714bb3964d3f0d0bfb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
